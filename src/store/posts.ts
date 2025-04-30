@@ -1,7 +1,7 @@
 import {defineStore} from "pinia";
 import {ref} from "vue";
 
-export interface Post {
+export interface PostInterface {
     id: number;
     title: string;
     content: string;
@@ -9,12 +9,12 @@ export interface Post {
 }
 
 export const usePostsStore = defineStore('postsData', () => {
-    let posts = ref<Post[]>([]);
+    let posts = ref<PostInterface[]>([]);
 
     const getPosts = async () => {
         try {
             const response = await fetch("https://my-json-server.typicode.com/TatianaChF/posts/posts");
-            posts.value = await response.json() as Post[];
+            posts.value = await response.json() as PostInterface[];
 
             console.log(posts.value)
         } catch (error) {
