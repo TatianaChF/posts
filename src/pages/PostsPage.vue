@@ -1,6 +1,11 @@
 <template>
-  <div v-for="post in postsStore.posts" :key="post.id">
-    <Post :postData="post" />
+  <div class="posts-grid row">
+    <div
+        v-for="post in postsStore.posts"
+        :key="post.id"
+        class="col-12 col-md-6 col-lg-4">
+      <Post :postData="post" />
+    </div>
   </div>
 </template>
 
