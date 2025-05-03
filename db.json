@@ -4,31 +4,31 @@
       "id": 1,
       "title": "The Benefits of Morning Meditation",
       "content": "Starting your day with 10 minutes of meditation can improve focus, reduce stress levels, and help set a positive tone for the entire day. Try using guided apps like Headspace for beginners.",
-      "author": "Emily Carter"
+      "userId": 1
     },
     {
       "id": 2,
       "title": "Urban Gardening: Growing Herbs in Small Spaces",
       "content": "You don't need a backyard to grow fresh herbs! Learn how to create a vertical garden using recycled containers and optimize sunlight exposure in apartment environments.",
-      "author": "Raj Patel"
+      "userId": 2
     },
     {
       "id": 3,
       "title": "Understanding Blockchain Technology",
       "content": "Beyond cryptocurrencies, blockchain offers revolutionary solutions for supply chain management, digital identity verification, and secure voting systems. Here's how it works in simple terms.",
-      "author": "Sophie Müller"
+      "userId": 3
     },
     {
       "id": 4,
       "title": "The Art of French Pastry: Making Perfect Croissants",
       "content": "Discover the secrets of laminated dough and the importance of temperature control in creating those iconic flaky layers. Includes step-by-step photos and troubleshooting tips.",
-      "author": "Lucie Dubois"
+      "userId": 4
     },
     {
       "id": 5,
       "title": "Minimalist Travel Packing Guide",
       "content": "How to pack for a 2-week vacation using only carry-on luggage. Essential checklist, space-saving folding techniques, and multi-functional item recommendations.",
-      "author": "James Wong"
+      "userId": 5
     }
   ],
   "users": [
