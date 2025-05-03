@@ -8,8 +8,14 @@ export interface PostInterface {
     userId: number;
 }
 
+export interface User {
+    id: number;
+    name: string;
+}
+
 export const usePostsStore = defineStore('postsData', () => {
     let posts = ref<PostInterface[]>([]);
+    let users = ref<User[]>([]);
 
     const getPosts = async () => {
         try {
@@ -20,5 +26,14 @@ export const usePostsStore = defineStore('postsData', () => {
         }
     }
 
-    return {posts, getPosts}
+    const getUsers = async () => {
+        try {
+            const response = await fetch("https://my-json-server.typicode.com/TatianaChF/posts/users");
+            users.value = await response.json() as User[];
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+    return {posts, getPosts, users, getUsers}
 })
