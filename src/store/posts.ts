@@ -15,8 +15,6 @@ export const usePostsStore = defineStore('postsData', () => {
         try {
             const response = await fetch("https://my-json-server.typicode.com/TatianaChF/posts/posts");
             posts.value = await response.json() as PostInterface[];
-
-            console.log(posts.value)
         } catch (error) {
             console.error(error);
         }
