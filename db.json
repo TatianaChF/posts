@@ -30,5 +30,27 @@
       "content": "How to pack for a 2-week vacation using only carry-on luggage. Essential checklist, space-saving folding techniques, and multi-functional item recommendations.",
       "author": "James Wong"
     }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Emily Carter"
+    },
+    {
+      "id": 2,
+      "name": "Raj Patel"
+    },
+    {
+      "id": 3,
+      "name": "Sophie Müller"
+    },
+    {
+      "id": 4,
+      "name": "Lucie Dubois"
+    },
+    {
+      "id": 5,
+      "name": "James Wong"
+    }
   ]
 }
