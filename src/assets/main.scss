@@ -1,0 +1,55 @@
+$primary: #2c3e50;
+$secondary: #95a5a6;
+$border-radius: 0.75rem;
+
+@import "bootstrap/scss/bootstrap";
+
+$dark-blue: #2c3e50;
+$grid-gap: 2rem;
+$border-width: 2px;
+
+.posts-grid {
+    padding: 3rem 0;
+
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -$grid-gap/2;
+
+        .post-card {
+            flex: 1 1 calc(33.333% - #{$grid-gap});
+            min-width: 300px;
+            margin: $grid-gap/2;
+            border: $border-width solid $dark-blue;
+            border-radius: 0.75rem;
+            transition: all 0.3s ease;
+
+            .card-body {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                padding: 1.5rem;
+            }
+
+            .card-title {
+                flex-shrink: 0;
+            }
+
+            .card-text {
+                flex-grow: 1;
+            }
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .flex-container .post-card {
+            flex-basis: calc(50% - #{$grid-gap});
+        }
+    }
+
+    @media (max-width: 768px) {
+        .flex-container .post-card {
+            flex-basis: 100%;
+        }
+    }
+}
