@@ -13,7 +13,6 @@ export const useUsersStore = defineStore('usersData', () => {
         try {
             const response = await fetch("https://my-json-server.typicode.com/TatianaChF/posts/users");
             users.value = await response.json() as User[];
-            console.log(users);
         } catch (error) {
             console.error(error);
         }
