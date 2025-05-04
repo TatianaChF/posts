@@ -9,6 +9,7 @@
           class="form-control"
           placeholder="Search posts..."
           aria-label="Search posts"
+          v-model="searchQuery"
       >
       <button
           class="btn btn-outline-secondary"
@@ -20,4 +21,14 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import {ref, watch} from "vue";
+import {usePostsStore} from "../store/posts.ts";
+
+let searchQuery = ref<string>('');
+const postsStore = usePostsStore();
+
+watch(searchQuery, () => {
+  postsStore.filtrationPosts(searchQuery.value.toLowerCase());
+})
+</script>

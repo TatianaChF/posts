@@ -1,7 +1,7 @@
 <template>
   <div class="posts-grid row">
     <div
-        v-for="post in postsStore.posts"
+        v-for="post in postsStore.filteredPosts"
         :key="post.id"
         class="col-12 col-md-6 col-lg-4">
       <Post :postData="post" />
