@@ -53,3 +53,31 @@ $border-width: 2px;
         }
     }
 }
+
+.search-component {
+    max-width: 600px;
+    margin: 0 auto;
+
+    .input-group-text {
+        background-color: white;
+        border-right: none;
+        i {
+            color: #6c757d;
+        }
+    }
+
+    .form-control {
+        border-left: none;
+        &:focus {
+            box-shadow: none;
+            border-color: #ced4da;
+        }
+    }
+
+    .btn-outline-secondary {
+        transition: all 0.3s ease;
+        &:hover {
+            background-color: #f8f9fa;
+        }
+    }
+}
