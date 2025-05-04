@@ -6,6 +6,7 @@ export interface PostInterface {
     title: string;
     content: string;
     userId: number;
+    userName?: string;
 }
 
 export interface User {
@@ -21,6 +22,7 @@ export const usePostsStore = defineStore('postsData', () => {
         try {
             const response = await fetch("https://my-json-server.typicode.com/TatianaChF/posts/posts");
             posts.value = await response.json() as PostInterface[];
+            getUserName();
         } catch (error) {
             console.error(error);
         }
@@ -35,5 +37,17 @@ export const usePostsStore = defineStore('postsData', () => {
         }
     }
 
-    return {posts, getPosts, users, getUsers}
+    const getUserName = () => {
+        for (let i = 0; i < posts.value.length; i++) {
+            const user
+                = users.value.find((user) => user.id === posts.value[i].userId);
+            if (user) {
+                posts.value[i].userName = user.name;
+            } else {
+                posts.value[i].userName = "";
+            }
+        }
+    }
+
+    return {posts, getPosts, users, getUsers, getUserName}
 })

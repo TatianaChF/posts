@@ -21,6 +21,7 @@ defineProps({
 })
 
 onBeforeMount(() => {
+  postsStore.getUsers();
   postsStore.getPosts();
 })
 </script>
