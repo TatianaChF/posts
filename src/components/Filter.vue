@@ -1,22 +1,17 @@
 <template>
-  <div class="search-component mb-4">
+  <div class="search-box">
     <div class="input-group">
-      <span class="input-group-text">
-        <i class="bi bi-search"></i>
+      <span class="input-icon">
+        <svg class="search-icon" viewBox="0 0 24 24" width="24" height="24">
+          <path d="M10 2.5a7.5 7.5 0 0 1 5.964 12.096l5.17 5.17a1 1 0 0 1-1.414 1.414l-5.17-5.17A7.5 7.5 0 1 1 10 2.5zm0 2a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11z"/>
+        </svg>
       </span>
       <input
           type="text"
-          class="form-control"
+          class="search-input"
           placeholder="Search posts..."
-          aria-label="Search posts"
           v-model="searchQuery"
-      >
-      <button
-          class="btn btn-outline-secondary"
-          type="button"
-      >
-        Clear
-      </button>
+      />
     </div>
   </div>
 </template>
