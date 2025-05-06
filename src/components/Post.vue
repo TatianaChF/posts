@@ -3,7 +3,7 @@
     <div class="card-body position-relative">
       <h5 class="card-title">{{props.postData.title}}</h5>
       <p class="card-text">{{props.postData.content}}</p>
-      <p>{{props.postData.author}}</p>
+      <p>{{props.postData.userName}}</p>
     </div>
   </div>
 </template>
