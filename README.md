@@ -49,3 +49,8 @@ bun run build
 ### Lints and fixes files
 
 ```
+# yarn
+yarn lint
+
+# npm
+npm run lint
