@@ -1,9 +1,9 @@
 <template>
-  <div class="posts-grid row">
+  <div class="posts-grid d-flex flex-row flex-wrap">
     <div
         v-for="post in postsStore.filteredPosts"
         :key="post.id"
-        class="col-12 col-md-6 col-lg-4">
+        class="mb-auto col-12 col-md-6 col-lg-4">
       <Post :postData="post" />
     </div>
   </div>
